@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Exit</button>
+    <button>Backward</button>
+    <button disabled>Forward</button>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 95vh;
+            column-gap: 10px;
+            background-color: #9ce0d1;
+        }
+        button{
+            padding: 10px 25px;
+            border-radius: 13px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:disabled{
+            background-color: rgb(98, 98, 98);
+            cursor: none;
+        }
+        button:disabled:hover{
+            animation: shake 200ms 2;
+        }
+        @keyframes shake {
+            0%,100%{ translate: 0; }
+            25%{ translate: 0.125rem; }
+            75%{ translate: -0.125rem; }
+        }
+    </style>
+</body>
+</html>
